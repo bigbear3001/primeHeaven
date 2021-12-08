@@ -36,3 +36,10 @@ real    3m19,707s
 user    3m19,429s
 sys     0m0,224s
 ```
+## 0.0.5
+keep a separate list for index based returning of prime ranges
+```
+real    2m4,931s
+user    2m4,687s
+sys     0m0,224s
+```

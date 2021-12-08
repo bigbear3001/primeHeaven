@@ -1,4 +1,7 @@
+from math import sqrt
+
 from prime_cache import PrimeCache
+
 KNOWN_PRIMES = PrimeCache(2)
 
 
@@ -8,7 +11,7 @@ def is_prime(number):
     global KNOWN_PRIMES
     if KNOWN_PRIMES.is_known_prime(number):
         return True
-    for i in find_primes(2, max(int(number/2), 2)):
+    for i in find_primes(2, max(int(sqrt(number)), 2)):
         if number % i == 0:
             return False
     KNOWN_PRIMES.add(number)

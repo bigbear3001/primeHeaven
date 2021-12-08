@@ -43,3 +43,10 @@ real    2m4,931s
 user    2m4,687s
 sys     0m0,224s
 ```
+## 0.0.6
+test divisors only up to the sqrt of the possible prime
+```
+real    0m1,526s
+user    0m1,497s
+sys     0m0,028s
+```

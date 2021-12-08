@@ -6,7 +6,7 @@ def is_prime(number):
     if number < 2:
         return False
     global KNOWN_PRIMES
-    if number in KNOWN_PRIMES:
+    if KNOWN_PRIMES.is_known_prime(number):
         return True
     for i in find_primes(2, max(int(number/2), 2)):
         if number % i == 0:
@@ -16,8 +16,8 @@ def is_prime(number):
 
 
 def find_primes(start_with=0, end_with=None):
-    if KNOWN_PRIMES.min <= start_with and KNOWN_PRIMES.max >= end_with:
-        for p in (p for p in KNOWN_PRIMES if start_with <= p <= end_with):
+    if KNOWN_PRIMES.already_know_all_of_them(start_with, end_with):
+        for p in KNOWN_PRIMES.primes(start_with, end_with):
             yield p
         return
     if start_with <= 2:

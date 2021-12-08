@@ -29,3 +29,10 @@ real    5m23,331s
 user    5m21,369s
 sys     0m1,900s
 ```
+## 0.0.4
+use a set instead of a dict as cache structure for faster `in` lookups
+```
+real    3m19,707s
+user    3m19,429s
+sys     0m0,224s
+```

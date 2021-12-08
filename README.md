@@ -22,3 +22,10 @@ real    8m9,792s
 user    8m7,836s
 sys     0m1,788s
 ```
+## 0.0.3
+created a cache class that keeps track of min and max value
+```
+real    5m23,331s
+user    5m21,369s
+sys     0m1,900s
+```

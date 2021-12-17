@@ -57,9 +57,9 @@ user    9m5,551s
 sys     0m0,988s
 ```
 ## 0.0.7
-add a fastpath: if decimal integer is ending in 5 it is not a prime
+add a fastpath: if decimal integer is ending in 5 it is not a prime (except 5 itself)
 ```
-real    8m34,067s
-user    8m32,786s
-sys     0m1,141s
+real    8m30,763s
+user    8m29,745s
+sys     0m0,936s
 ```

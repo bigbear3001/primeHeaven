@@ -56,3 +56,10 @@ real    9m6,634s
 user    9m5,551s
 sys     0m0,988s
 ```
+## 0.0.7
+add a fastpath: if decimal integer is ending in 5 it is not a prime
+```
+real    8m34,067s
+user    8m32,786s
+sys     0m1,141s
+```

@@ -2,7 +2,15 @@ from math import sqrt
 
 from prime_cache import PrimeCache
 
-KNOWN_PRIMES = PrimeCache(2)
+KNOWN_PRIMES = PrimeCache(2, 3)
+
+
+def is_possible_prime(number):
+    if number % 2 == 0:
+        return False
+    if str(number)[-1] == "5":
+        return False
+    return True
 
 
 def is_prime(number):
@@ -11,11 +19,13 @@ def is_prime(number):
     global KNOWN_PRIMES
     if KNOWN_PRIMES.is_known_prime(number):
         return True
-    for i in find_primes(2, max(int(sqrt(number)), 2)):
-        if number % i == 0:
-            return False
-    KNOWN_PRIMES.add(number)
-    return True
+    if is_possible_prime(number):
+        for i in find_primes(3, max(int(sqrt(number)), 3)):
+            if number % i == 0:
+                return False
+        KNOWN_PRIMES.add(number)
+        return True
+    return False
 
 
 def find_primes(start_with=0, end_with=None):

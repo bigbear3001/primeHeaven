@@ -50,3 +50,9 @@ real    0m1,526s
 user    0m1,497s
 sys     0m0,028s
 ```
+updated number to test for the first 100 000 000 primes in batches of 100000
+```
+real    9m6,634s
+user    9m5,551s
+sys     0m0,988s
+```

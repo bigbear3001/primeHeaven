@@ -6,7 +6,7 @@ from prime import find_primes
 def stat_prime_find_times(batch_size):
     start = datetime.now()
     primes_found = []
-    for prime in find_primes(2, 1000000):
+    for prime in find_primes(2, 100000000):
         primes_found.append(prime)
         if len(primes_found) == batch_size:
             end = datetime.now()
@@ -26,4 +26,4 @@ def stat_prime_find_times(batch_size):
 
 
 if __name__ == '__main__':
-    stat_prime_find_times(1000)
+    stat_prime_find_times(100000)

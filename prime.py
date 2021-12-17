@@ -12,6 +12,12 @@ def is_possible_prime(number):
         return True
     if str(number)[-1] == "5":
         return False
+    # fermat primality test with a=2:
+    # Given an integer n, choose some integer a coprime to n and calculate an − 1 modulo n.
+    # If the result is different from 1, then n is composite.
+    # https://en.wikipedia.org/wiki/Primality_test
+    if pow(2, number - 1, number) != 1:
+        return False
     return True
 
 

@@ -63,3 +63,10 @@ real    8m30,763s
 user    8m29,745s
 sys     0m0,936s
 ```
+## 0.0.8
+add fermat primality test as fastpath for composite numbers
+```
+real    4m57,187s
+user    4m55,881s
+sys     0m1,252s
+```
